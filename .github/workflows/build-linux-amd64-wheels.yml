@@ -12,10 +12,7 @@ name: build-linux-amd64-wheels
         required: true
 jobs:
   build_wheels:
-    runs-on:
-      - self-hosted
-      - Linux
-      - ARM64
+    runs-on: ubuntu-latest
     container: quay.io/pypa/manylinux_2_28_amd64
     env:
       PACKAGES_TO_BUILD: ${{ inputs.packages }}
